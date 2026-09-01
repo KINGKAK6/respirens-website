@@ -51,7 +51,21 @@ https://claude.ai/code/artifact/6b542938-8143-45a2-8a0f-88a0d8891ffb
 Na inhoudelijke wijzigingen: bundel opnieuw (alle pagina-`<main>`s + CSS/JS inline,
 foto's als data-URI's, hash-routering) en publiceer op dezelfde artifact-URL.
 
-## Nog openstaand vóór livegang
+## Hosting en deploy
+
+- **Live op GitHub Pages**: https://kingkak6.github.io/respirens-website/ — publiek
+  GitHub-repo `KINGKAK6/respirens-website`, branch `main`. Elke push naar main wordt
+  automatisch opnieuw gepubliceerd (git add/commit/push volstaat).
+- **Netlify**: site "respirens" (respirens.netlify.app) is aangemaakt en gekoppeld, maar
+  deploys zijn geblokkeerd — het gratis tegoed van het account is op ("account credit
+  usage exceeded"). Later te heractiveren via app.netlify.com; dan kan ook het eigen
+  domein daar gekoppeld worden.
+- Beveiligingsheaders staan in `_headers` (Netlify/Cloudflare) en `.htaccess` (klassieke
+  hosters); GitHub Pages ondersteunt geen eigen headers, maar dwingt wel https af.
+- De links op 404.html beginnen met `/` en kloppen pas volledig zodra de site op een eigen
+  domein draait (op het GitHub-subpad wijzen ze naar de hoofdmap).
+
+## Nog openstaand vóór livegang op het eigen domein
 
 - Telefoonnummer is placeholder: `+32470000000` / `+32 (0)470 00 00 00` (overal vervangen).
 - Ondernemingsnummer `BE 0000.000.000` (footer + privacybeleid).
