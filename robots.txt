@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /privacybeleid.html
+
+Sitemap: https://www.respirens.be/sitemap.xml

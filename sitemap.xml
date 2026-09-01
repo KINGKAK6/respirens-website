@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.respirens.be/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.respirens.be/behandelingen.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.respirens.be/respiratoire-kinesitherapie.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.respirens.be/cardiale-kinesitherapie.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.respirens.be/algemene-kinesitherapie.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.respirens.be/over-respirens.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.respirens.be/tarieven.html</loc><priority>0.8</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.respirens.be/praktisch.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.respirens.be/contact.html</loc><priority>0.9</priority><changefreq>yearly</changefreq></url>
+</urlset>
