@@ -1,6 +1,6 @@
 /* Respirens service worker — eenvoudige offline-cache.
    Verhoog CACHE_VERSION bij elke grote update van de site. */
-var CACHE_VERSION = 'respirens-v2';
+var CACHE_VERSION = 'respirens-v3';
 
 var CORE = [
   './',

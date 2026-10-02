@@ -1005,3 +1005,33 @@ table.rates small { display: block; color: var(--muted); font-size: .85rem; marg
   .marquee__track { animation: none; }
   .split-ready .wi { transform: none; transition: none; }
 }
+
+/* ---------- 24. Ademende bol in de hero ------------------------------ */
+/* Zachte gradient-bol die traag groeit en krimpt op ademritme:
+   ±4 sec in, ±5 sec uit — het tempo van een rustige ademhaling. */
+.breath-orb {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 56%;
+  width: min(88vw, 820px);
+  height: min(88vw, 820px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 38% 32%, rgba(236, 247, 241, .50), rgba(236, 247, 241, 0) 58%),
+    radial-gradient(circle at 64% 62%, rgba(169, 216, 194, .42), rgba(169, 216, 194, 0) 64%),
+    radial-gradient(circle at 50% 50%, rgba(92, 158, 130, .38), rgba(92, 158, 130, 0) 72%);
+  filter: blur(42px);
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: ademen 9.5s ease-in-out infinite;
+}
+@keyframes ademen {
+  0%, 100% { transform: translate(-50%, -50%) scale(.90); opacity: .60; }
+  42%      { transform: translate(-50%, -50%) scale(1.07); opacity: .92; }
+  55%      { transform: translate(-50%, -50%) scale(1.05); opacity: .88; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .breath-orb { animation: none; opacity: .7; }
+}
