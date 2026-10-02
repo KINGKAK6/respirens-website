@@ -1,6 +1,6 @@
 /* Respirens service worker — eenvoudige offline-cache.
    Verhoog CACHE_VERSION bij elke grote update van de site. */
-var CACHE_VERSION = 'respirens-v3';
+var CACHE_VERSION = 'respirens-v4';
 
 var CORE = [
   './',
@@ -64,13 +64,16 @@ self.addEventListener('fetch', function (e) {
       })
     );
   } else {
+    /* Assets: meteen uit de cache tonen, maar op de achtergrond verversen
+       zodat vervangen foto's bij het volgende bezoek zichtbaar zijn. */
     e.respondWith(
       caches.match(e.request).then(function (hit) {
-        return hit || fetch(e.request).then(function (res) {
+        var vernieuw = fetch(e.request).then(function (res) {
           var copy = res.clone();
           caches.open(CACHE_VERSION).then(function (c) { c.put(e.request, copy); });
           return res;
-        });
+        }).catch(function () { return hit; });
+        return hit || vernieuw;
       })
     );
   }
