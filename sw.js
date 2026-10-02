@@ -1,6 +1,6 @@
 /* Respirens service worker — eenvoudige offline-cache.
    Verhoog CACHE_VERSION bij elke grote update van de site. */
-var CACHE_VERSION = 'respirens-v1';
+var CACHE_VERSION = 'respirens-v2';
 
 var CORE = [
   './',
@@ -17,6 +17,8 @@ var CORE = [
   './404.html',
   './assets/css/style.css',
   './assets/js/main.js',
+  './assets/js/lenis.min.js',
+  './assets/js/motion.js',
   './assets/img/logo-mark.png',
   './assets/img/logo-full-wit.png',
   './favicon.svg'

@@ -949,3 +949,59 @@ table.rates small { display: block; color: var(--muted); font-size: .85rem; marg
 .topic-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: .6rem 2.5rem; }
 .topic-list li { padding: .7rem 0 .7rem 1.9rem; border-bottom: 1px solid var(--line); position: relative; font-size: 1.02rem; color: var(--ink); }
 .topic-list li::before { content: ""; position: absolute; left: .2rem; top: 1.15rem; width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+
+/* ---------- 23. Vloeiende bewegingseffecten (motion.js) -------------- */
+/* Titels: woorden glijden omhoog in beeld */
+.split-ready .w {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: .12em;
+  margin-bottom: -.12em;
+}
+.split-ready .wi {
+  display: inline-block;
+  transform: translateY(112%);
+  transition: transform 1s cubic-bezier(.19, 1, .22, 1);
+  will-change: transform;
+}
+.split-ready.words-in .wi { transform: none; }
+
+/* Parallaxlaag: vaste basisschaal, beweging komt uit JavaScript */
+.hero__media.has-parallax { animation: none; transform: scale(1.14); }
+
+/* Fotoblokken: enkel de doorzichtigheid via .reveal animeren,
+   de beweging komt van de parallax */
+.photo-block.reveal { transition: opacity .8s var(--ease); transform: none; }
+
+/* Gleidende tekstband */
+.marquee {
+  overflow: hidden;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 36s linear infinite;
+}
+.marquee__track span {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: .06em;
+  color: var(--green);
+  opacity: .45;
+  white-space: nowrap;
+  padding-right: 2.5rem;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+  .split-ready .wi { transform: none; transition: none; }
+}

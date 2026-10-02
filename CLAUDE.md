@@ -43,6 +43,11 @@ altijd niet-technisch uit en antwoord in het Nederlands.
   eigen praktijkfoto's met dezelfde bestandsnaam.
 - Logo: `logo-mark.png` (header), `logo-full.png`, `logo-full-wit.png` (donkere footer).
 - PWA: `manifest.webmanifest` + `sw.js`; verhoog `CACHE_VERSION` in sw.js bij grote updates.
+- Bewegingseffecten (SOMA-inspiratie): `assets/js/lenis.min.js` (lokaal gehost, smooth scroll)
+  + `assets/js/motion.js` (woord-reveals op h1/h2, parallax, ankerglijden) + sectie 23 in
+  style.css + marquee op index. Alles respecteert prefers-reduced-motion; op touch blijft
+  native scrollen. **Terugzet-anker**: git-tag `stabiel-v1` = de versie vóór deze effecten;
+  terugzetten = `git revert` naar die tag (of reset + force push) en opnieuw pushen.
 
 ## Preview voor op de gsm
 
