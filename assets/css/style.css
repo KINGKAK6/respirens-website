@@ -985,7 +985,7 @@ table.rates small { display: block; color: var(--muted); font-size: .85rem; marg
 .marquee__track {
   display: flex;
   width: max-content;
-  animation: marquee 36s linear infinite;
+  animation: marquee 144s linear infinite;
 }
 .marquee__track span {
   font-family: var(--font-display);
